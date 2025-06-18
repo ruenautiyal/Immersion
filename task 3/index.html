@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Search & Listing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Product Search</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Enter product name..." />
+      <button onclick="searchProduct()">Search</button>
+    </div>
 
+    <h2>Or View All Products</h2>
+    <button onclick="listAllProducts()" class="all-products-btn">Show All Products</button>
+
+
+    <div class="sort-section">
+      <label for="sortSelect">Sort by:</label>
+      <select id="sortSelect" onchange="sortProducts()">
+        <option value="">-- Select --</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="rating-asc">Rating: Low to High</option>
+        <option value="rating-desc">Rating: High to Low</option>
+      </select>
+    </div>
+
+    <div id="results" class="product-grid"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
